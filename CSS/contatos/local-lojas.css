@@ -1,0 +1,47 @@
+.local-lojas-bg{
+    background-color: var(--cor-1);
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.local-lojas h2{
+    margin-bottom: 40px;
+}
+.lojas-conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.local > div{
+    padding: 30px;
+    background-color: var(--cor-0);
+}
+.local-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.local-item > div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.local-item a, .local-item p{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.local-item > div::before{
+    content: '';
+    width: 2px;
+    height: 50px;
+    background-color: var(--cor-3);
+    display: inline-block;
+}
+.local span{
+    display: flex;
+    gap: 10px;
+    display: block;
+    margin-top: 20px;
+    align-items: center;
+}

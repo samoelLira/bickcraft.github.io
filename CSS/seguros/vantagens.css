@@ -1,0 +1,11 @@
+.vantagens-bg{
+    background-color: var(--cor-12);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.vantagens > div{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}

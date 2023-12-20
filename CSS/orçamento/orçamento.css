@@ -1,0 +1,128 @@
+.orçamento-bg{
+    background-color: var(--cor-11);
+    padding-top: 30px;
+    padding-bottom: 80px;
+    box-shadow: inset 0 -500px var(--cor-1);
+}
+.orçamento-form{
+    background-color: var(--cor-0);
+    padding: 40px;
+}
+.orçamento form{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+.orçamento h2{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.orçamento h2::before{
+    content: '';
+    width: 5px;
+    height: 10px;
+    background-color: var(--cor-p1);
+    display: inline-block;
+}
+.escolha{
+    background-color: var(--cor-12);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content: start;
+}
+.escolha input[type='radio']{
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.escolha label{
+    color: var(--cor-0);
+    padding: 13px 20px ;
+    background-color: var(--cor-10);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+}
+.escolha input:focus + label{
+    outline: none;
+    border: 2px solid var(--cor-12);
+    box-shadow: 0 0 0 2px var(--cor-p1);
+}
+.escolha label:hover{
+    background-color: var(--cor-9);
+}
+.escolha label::before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--cor-12);
+    display: inline-block;
+    margin-right: 8px;
+}
+.escolha input:checked + label{
+    background-color: var(--cor-0);
+    color: var(--cor-12);
+}
+.escolha input:checked + label::before{
+    box-shadow: inset 0 0 0 5px var(--cor-0), inset 0 0 0 8px var(--cor-11);
+}
+.custom{
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+.custom h2{
+    margin-bottom: 20px;
+}
+.custom label{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 10px;
+}
+.custom label span{
+    visibility: hidden;
+}
+
+/* visible escolhas*/
+.custom input:checked + label span{
+    visibility: visible;
+}
+.escolha-bickcraft, .escolha-seguro{
+    display: none;
+} 
+.escolha > input[id='seguro']:checked ~ .escolha-seguro{
+    display: block;
+}
+.escolha > input[id='bickcraft']:checked ~ .escolha-bickcraft{
+    display: block;
+}
+
+
+.nimbus{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    background-color: var(--cor-0);
+    border-radius: 4px;
+    margin-top: 10px;
+    display: none;
+}
+.nimbus ul li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nimbus ul img{
+    width: 18px;
+}
+.escolha-bickcraft input:checked + label + div{
+    display: grid;
+}
+
+
+
+

@@ -1,0 +1,48 @@
+.contatos-main-bg{
+    background-color: var(--cor-11);
+    box-shadow: inset 0 -280px var(--cor-1);
+}
+.contatos-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contatos-loja{
+    background-color: var(--cor-12);
+    padding: 60px;
+}
+.contatos-loja address{
+    margin-top: 40px;
+}
+.contatos-loja p, .contatos-loja a{
+    margin-top: 10px;
+    margin-bottom: 3px;
+    display: block;
+}
+.contatos-loja a:hover{
+    color: var(--cor-0);
+}
+.contatos-email{
+    margin-top: 50px;
+}
+.contatos-tel{
+    margin-top: 50px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.grid img{
+    position: relative;
+    top: 10px;
+}
+.contatos-redes{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+}
+.contatos-form{
+    padding: 60px;
+    background-color: var(--cor-0);
+}

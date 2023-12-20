@@ -1,0 +1,43 @@
+.menu-bicicletas{
+    overflow: hidden;
+    padding: 20px;
+}
+.menu-bicicletas h2{
+    margin-bottom: 60px;
+}
+.menu-bicicletas > div{
+    display: flex;
+    gap: 40px;
+}
+.menu-bicicletas h3{
+    display: flex;
+    align-items: center;
+}
+.menu-bicicletas h3::before{
+    content: "";
+    width: 20px;
+    height: 10px;
+    background-color: var(--cor-p1);
+    display: inline-block;
+    transition: 0.3s;
+}
+.menu-bicicletas a:hover h3::before{
+    width: 40px;
+}
+.menu-bicicletas a > div{
+    overflow: hidden;
+}
+.menu-bicicletas img{
+    overflow: hidden;
+    transition: 0.3s;
+}
+.menu-bicicletas a:hover img{
+    transform: scale(1.2);
+}
+.menu-bicicletas > div{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.menu-bicicletas > div a{
+    min-width: 200px;
+}

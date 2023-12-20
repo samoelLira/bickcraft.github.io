@@ -1,0 +1,128 @@
+.header-bg{
+    background-color: var(--cor-12);
+    padding: 40px 0px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu{
+    display: flex;
+    gap: 40px;
+}
+#menu a{
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+#menu a.active::after{
+    width: 100%;
+}
+#menu a::after{
+    content: '';
+    width: 0px;
+    position: absolute;
+    display: block;
+    background-color: var(--cor-0);
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.3s;
+}
+#menu a:hover::after{
+    width: 100%;
+}
+#menu-mobile{
+    display: none;
+    background-color: var(--cor-12);
+    border: none;
+}
+#menu-mobile div{
+    border-top: 2px solid var(--cor-0);
+    width: 20px;
+    display: grid;
+}
+#menu-mobile div::after{
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    background-color: var(--cor-0);
+    margin-top: 8px;
+    transition: 0.3s;
+    position: relative;
+}
+#menu-mobile div::before{
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    background-color: var(--cor-0);
+    margin-top: 8px;
+    transition: 0.3s;
+    position: relative;
+}
+@media(max-width: 900px){
+    #menu a{
+        background-color: var(--cor-9);
+    }
+    #menu a::after{
+        background-color: transparent;
+    }
+    #menu a:hover{
+        background-color: var(--cor-7);
+    }
+}
+@media(max-width: 700px){
+    .header-bg{
+        padding: 20px 0px;
+    }
+    #navp{
+        position: relative;
+    }
+    #menu {
+        visibility: hidden;
+        display: grid;
+        background-color: var(--cor-10);
+        height: 0px;
+        position: absolute;
+        right: 0px;
+        width: max-content;
+        padding: 20px 40px;
+        top: 75px;
+        border-radius: 0px 0px 4px 4px;
+        transition: 0.6s;
+        overflow: hidden;
+    }
+    #navP.active #menu{
+        visibility: visible;
+        height: 230px;
+    }
+    #navP.active #menu-mobile div{
+        border-top-color: transparent;
+    }
+    #navP.active #menu-mobile div::after{
+        transform: rotate(135deg);
+        top: 0px;
+        margin-top: 0px;
+    }
+    #navP.active #menu-mobile div::before{
+        transform: rotate(-135deg);
+        top: 2px;
+        
+    }
+    #navP.active #menu-mobile{
+        background-color: var(--cor-9);
+    }
+    #menu-mobile{
+        display: flex;
+        gap: 10px;
+        border-radius: 4px;
+        padding: 10px 20px;
+    }
+    #menu-mobile:hover{
+        background-color: var(--cor-9);
+    }
+}

@@ -1,0 +1,25 @@
+.container{
+    max-width: 1160px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+body{
+    margin: 0px;
+}
+ul,a,li,h1,h2,h3,h4,blockquote,div,dd,dt{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+[src$= 'jpg']{
+    border-radius: 4px;
+}

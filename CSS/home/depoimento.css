@@ -1,0 +1,54 @@
+.depoimento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.depoimento-conteudo{
+    background-color: var(--cor-p1);
+    padding: 60px 60px;
+    display: grid;
+    align-content: end;
+}
+.depoimento-conteudo blockquote{
+    margin-bottom: 30px;
+}
+.depoimento-conteudo blockquote > div{
+    display: inline;
+    position: relative;
+}
+.depoimento-conteudo div div{
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-size: 4rem;
+}
+.depoimento-conteudo blockquote{
+    display: inline;
+    position: relative;
+    text-indent: 50px;
+}
+.depoimento-img img{
+    object-fit: cover;
+    height: 100%;
+}
+.depoimento-conteudo blockquote::before{
+    content: '“';
+    font-size: 4rem;
+    position: absolute;
+    top: -20px;
+    left: -40px;
+}
+@media(max-width: 800px){
+    .depoimento{
+        grid-template-columns: 1fr;
+    }
+    .depoimento-img img{
+        height: 300px;
+        width: 100%;
+    }
+}
+@media(max-width: 500px){  
+    .depoimento-conteudo{
+        padding: 20px;
+    } 
+
+}

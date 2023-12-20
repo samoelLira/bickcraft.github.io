@@ -1,0 +1,56 @@
+.perguntas{
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+.perguntas button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.perguntas dl{
+    margin-top: 50px;
+}
+.perguntas-item > div{
+    padding: 30px;
+    border-radius: 4px;
+}
+.perguntas-item > div:nth-child(odd){
+    background-color: var(--cor-2);
+}
+.perguntas-item dd{
+     margin-top: 10px;
+     max-width: 80ch;
+     visibility: hidden;
+     height: 0px;
+     transition: 0.3s;
+     overflow: hidden;
+}
+.perguntas-item dd.active{
+    visibility: visible;
+    height: 50px;
+}
+.perguntas-item dt button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.perguntas-item dt button::before{
+    content: '';
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    background-color: var(--cor-p1);
+    left: -20px;
+}
+.perguntas-item dt button::after{
+    content: '';
+    width: 15px;
+    height: 10px;
+    background: url('../../img/icones/seta-abrir.svg') no-repeat center center;
+    transition: 0.3s;
+}
+.perguntas-item dt button[aria-expanded='true']::after{
+    transform: rotate(180deg);
+}

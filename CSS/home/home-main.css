@@ -1,0 +1,25 @@
+.introduçao-bg{
+    background-color: var(--cor-12);
+    box-shadow: inset 0px -120px var(--cor-0);
+}
+.introduçao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.introduçao-conteudo{
+    display: grid;
+    align-content: end;
+    margin-bottom: 190px;
+}
+.introduçao-conteudo p{
+    max-width: 40ch;
+}
+@media(max-width: 850px){
+    .introduçao{
+        grid-template-columns: 1fr;
+    }
+    .introduçao-conteudo{
+        margin-bottom: 0px;
+    }
+}
